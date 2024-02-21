@@ -8,7 +8,9 @@ void sort(int *a, int n){ // сортировка Шелла
             // проходим по массиву, сравнивая элементы, разность которых равна шагу
             for (j = i; j >= step; j -= step)
             {
+                COMPARES++;
                 if (tmp < a[j - step])
+                    SWAPS++;
                     a[j] = a[j - step];
                 else
                     break;
